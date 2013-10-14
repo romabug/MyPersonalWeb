@@ -7,7 +7,7 @@ https://github.com/romabug/OperaBox
  
 License of source code
 ----------------------
-Copyright (C) 2012-2013 romabug, Hanchang Cai <hanchangcai@gmail.com>
+Copyright (C) 2013-2014 romabug, Hanchang Cai <hanchangcai@gmail.com>
 Cell: 0412 545 228  Sydney Australia
 
 This program is free software; you can redistribute it and/or modify
