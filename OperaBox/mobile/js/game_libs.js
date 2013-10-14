@@ -17,6 +17,7 @@ function Fly_out_box(temp_url,left,top)
 },20);
  
   $("#gbigbox_2").animate({ left :left, top : top },500,"easeInBack"); 
+  
    
  window.setTimeout( function () {
 	 
@@ -37,6 +38,52 @@ function Fly_out_box(temp_url,left,top)
 	
  };
   
+ 
+ 
+ 
+ // for 换图片
+ 
+ function Fly_out_box2(myurl,left,top)
+ {
+ var angle = 0;
+ var dingshi =  setInterval(function(){
+ angle+=55;
+   $("#gbigbox_2").rotate(angle);   
+   
+},20);
+ 
+  $("#gbigbox_2").animate({ left :left, top : top },500,"easeInBack"); 
+  
+   
+ window.setTimeout( function () {
+	 
+	    Re_start(myurl);
+	 
+ 	 window.clearInterval(dingshi); 
+ 	 $("#gbigbox_2").stop(true,true);
+ //回归原来地方	  
+	  $("#gbigbox_2").removeAttr("style");
+	   $("#gbigbox_2").css({"top":-320, "left": 0} );
+ 
+	    $("#gbigbox_2").animate({top:0 },300,"easeOutBack", function () {
+			
+ 
+			});
+ 
+ 	 }, 800 );
+	
+ };
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
 

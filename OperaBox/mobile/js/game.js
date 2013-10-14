@@ -21,7 +21,7 @@ $(document).ready(function(e) {
  
 var ini_pic =  "url(mydog5.jpg)" ;
 // var temp_url = "";
-var temp_url = ini_pic; 
+window.temp_url = ini_pic; 
 
  $(".tu_public").css("background-image",temp_url);	
 $("#gbigbox_pic").css("background-image",temp_url);
@@ -175,43 +175,49 @@ $("#block_top_shadow").change(function(e) {
  	  
 	  	  //    var dataURL = $("canvas").get(0).toDataURL();
 		  //     $("#jj").attr("src",dataURL );
-		 $(".tempbtn6").fadeIn();
+		 $(".confirm").fadeIn();
  		  
 		  
  });
  
+ $(".test1").click(function(e) {
+    alert  (temp_url);
+}); 
+ 
+ 
 // 手机选择 照片结束 
 
-$(".tempbtn6").click(function(e) {
-    
-	  var dataURL = $("canvas").get(0).toDataURL();
-  temp_url ="url(" +dataURL  + ")" ;  
-   $(".tu_public").css("background-image",temp_url);	
-$("#gbigbox_pic").css("background-image",temp_url);
-$("#gbigbox_pic_inner").css("background-image",temp_url);
-
- $("#gbigbox_pic_inner_tmp").css("background-image",temp_url);//右边层飞入	
+$(".confirm").click(function(e) {
+	var re_time = $("canvas").length -1 ;
+   var dataURL = $("canvas").get(re_time).toDataURL();
+   temp_url ="url(" +dataURL  + ")" ;
+   $("#gbigbox_pic").css("background-image",temp_url);  
+//  temp_url = temp_url;    
+   Re_start(temp_url);  
+ 
+ 
+   
+ 
+	 
  $(this).fadeOut( ); 
 	
 });
-
-
- 
- 
+  
+  
   }); 
  
 ///主函数结束///////////////////////////////////////// 
  
  
  
- 
+   
  
  
 //拼图游戏开始 
 function game () {
 //	 
- var ini_pic =  "url(mydog5.jpg)" ;
-  var temp_url = ini_pic;
+// var ini_pic =  "url(mydog5.jpg)" ;
+ // var temp_url = ini_pic;
   
 // $("#gbigbox_pic").css("background-image",temp_url);
 // 
