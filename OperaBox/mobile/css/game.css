@@ -39,11 +39,13 @@ Cell: 0412 545 228   Sydney Australia
 }
 #gbigbox_pic {
   display: none;
+  position:relative;
   width: 300px;
   height: 300px;
   overflow: hidden;
   border: 2px solid #FFF;
-  position: absolute;
+  overflow:hidden;
+ 
   z-index: 1;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -55,21 +57,26 @@ Cell: 0412 545 228   Sydney Australia
   box-shadow: #666666 1px 1px 5px;
   behavior: url(/pie/PIE.htc);
 }
-#gbigbox_pic .img_opacity {
+#gbigbox_pic  .img_opacity {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #FFFFFF;
-  background: -webkit-linear-gradient(#ffffcc, #ff6600);
-  background: -moz-linear-gradient(#ffffcc, #ff6600);
-  background: -ms-linear-gradient(#ffffcc, #ff6600);
-  background: -o-linear-gradient(#ffffcc, #ff6600);
-  background: linear-gradient(#ffffcc, #ff6600);
-  -pie-background: linear-gradient(#ffffcc, #ff6600);
-  opacity: 0.2;
-  -webkit-opacity: 0.2;
-  -moz-opacity: 0.2;
-  behavior: url(/pie/PIE.htc);
+  
+  
+  
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.1) 26%, rgba(0,0,0,0.1) 74%, rgba(0,0,0,0.56) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.58)), color-stop(26%,rgba(0,0,0,0.1)), color-stop(74%,rgba(0,0,0,0.1)), color-stop(100%,rgba(0,0,0,0.56))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.58) 0%,rgba(0,0,0,0.1) 26%,rgba(0,0,0,0.1) 74%,rgba(0,0,0,0.56) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0.58) 0%,rgba(0,0,0,0.1) 26%,rgba(0,0,0,0.1) 74%,rgba(0,0,0,0.56) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.58) 0%,rgba(0,0,0,0.1) 26%,rgba(0,0,0,0.1) 74%,rgba(0,0,0,0.56) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.58) 0%,rgba(0,0,0,0.1) 26%,rgba(0,0,0,0.1) 74%,rgba(0,0,0,0.56) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94000000', endColorstr='#8f000000',GradientType=0 ); /* IE6-9 */
+
+  
+   
+
+  
+ 
 }
 #info {
   overflow: hidden;
@@ -269,28 +276,60 @@ Cell: 0412 545 228   Sydney Australia
   -moz-box-shadow: 23px 7x 34px #000000;
   behavior: url(/pie/PIE.htc);
 }
-  
+
 #turl {
   font-size: 12px;
-  width: 200px;
+  width: 110px;
    
 }
 #pic_url {
-  margin-top: 15px;
+	clear:both;
+	display:block;
+	float:left;
+	margin-top:29px;
+	margin-bottom:12px;
+ 
+    margin-left:5px;
 }
-#pic_url span {
-  font-size: 12px;
-  display: block;
-}
+ 
+.guomeimei
+{
+	margin-top:15px;} 
+ 
 .guomeimei p {
-  display: block;
-  margin-top: 16px;
-  color: #FF6600;
-}
-#game_tool {
-  margin-top: 21px;
+ 
 }
 
+.guomeimei .range_l
+
+ {
+	  margin-left:5px;
+	 margin-right:0px;
+	 float:left;
+	 width:35%;
+	 overflow:auto;
+	 padding:0;
+ 	
+	}
+	
+.range_l input {
+	width:85%;
+	}	
+	
+.guomeimei .range_r
+{ 
+ 
+ margin-left:25px;
+	float:left;
+	 width:45%;
+	 overflow:auto;
+		 padding:0;
+	}
+.range_r input {
+	margin-right:6px;
+	
+	}	 
+	
 
 /*NICE BUTTON SKIN*/
 .button_f {
